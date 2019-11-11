@@ -44,6 +44,15 @@ Below are graphs visualizing the distribution each of the features. There are 68
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png">
 </p>
 
+# 3. Data Pre-Processing
+After visualizing the data we were able to process the data in some basic ways before we begin features selection.
+1. As noted above we removed all movies with no gross revenue listed
+2. Remove repetitve categories (don't need release date when we have release year), and irrelevant categories (movie name).
+3. Normalize the data
+
+#4. Feature Selection
+
+
 ## Movie Profit Analysis
 
 You can use the [editor on GitHub](https://github.com/gpantalone/MLTeam28/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
