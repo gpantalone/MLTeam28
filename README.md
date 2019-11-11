@@ -50,7 +50,7 @@ After visualizing the data we were able to process the data in some basic ways b
 2. Remove repetitve categories (don't need release date when we have release year), and irrelevant categories (movie name).
 3. Normalize the data
 
-#4. Feature Selection
+# 4. Feature Selection
 
 
 ## Movie Profit Analysis
