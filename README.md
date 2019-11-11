@@ -32,8 +32,8 @@ Films play a large role in generating profit and creating new Intellectual prope
 Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.)
 
 <p float="left">
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" width="400" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="450" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" width="450" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" width="400" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" width="400" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="400" height= "300" />
