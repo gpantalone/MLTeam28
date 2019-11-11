@@ -34,14 +34,14 @@ Below are graphs visualizing the distribution each of the features. There are 68
 <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="400" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" width="400" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" width="425" height= "300" />
 </p>
 
 # 3. Data Pre-Processing
