@@ -5,8 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.feature_selection import SelectFromModel
 from sklearn import preprocessing
-
+from sklearn.ensemble import RandomForestRegressor
 # read csv into np array
+# order of contData is:  Budget   Runtime   Year
+# order of catData is:  Company   Country   Director   Genre   Rating   Star   Writer
 contData = genfromtxt('contFeaturesNormed.csv', delimiter=',')
 catData = genfromtxt('categoryFeatures.csv', delimiter=',', dtype=str, encoding='UTF-8')
 labels = genfromtxt('normedLabels.csv', delimiter=',')
@@ -17,7 +19,7 @@ catData = np.delete(catData, 0,0)
 labels = np.delete(labels, 0,0)
 
 #need to encode the categorical data
-#gets the unique values for each column
+#gets the unique values for each column as lists
 entry0 = np.unique(catData[:,0])
 entry1 = np.unique(catData[:,1])
 entry2 = np.unique(catData[:,2])
@@ -28,7 +30,9 @@ entry6 = np.unique(catData[:,6])
 
 #set up the encoder, replace each cat column with its respective encoding
 le = preprocessing.LabelEncoder()
+#fits the encoder to use string values of the list we want it to
 le.fit(entry0)
+#transforms the strings to ints using the fitted values given before
 catData[:,0] = le.transform(catData[:,0])
 
 le = preprocessing.LabelEncoder()
@@ -55,12 +59,12 @@ le = preprocessing.LabelEncoder()
 le.fit(entry6)
 catData[:,6] = le.transform(catData[:,6])
 
-#normalize these new values
+#normalize these new values, and convert them to floats because they are number strings
 catData = catData.astype('float64')
 catData = catData / catData.max(axis=0)
 print(catData)
 
-#combine the features back together, order is budget  company country director    genre    rating     runtime    star     writer  year
+#combine the features back together, order is:  budget  company  country  director    genre    rating     runtime    star     writer   year
 
 data = np.append(contData[:,0].reshape(contData[:,0].shape[0],1),catData[:,[0,1,2,3,4]],1)
 data = np.append(data, contData[:,1].reshape(contData[:,0].shape[0],1),1)
@@ -72,8 +76,13 @@ print(X_train.shape,X_test.shape,y_train.shape,y_test.shape)
 
 ###################################
 
-tree = DecisionTreeRegressor(criterion='mse')
 
-sel = SelectFromModel(DecisionTreeRegressor(criterion='mse'))
+# sel = SelectFromModel(RandomForestRegressor(criterion='mse'))
+# sel.fit(X_train, y_train)
+sel = SelectFromModel(RandomForestRegressor(n_estimators = 100))
 sel.fit(X_train, y_train)
+
 print(sel.get_support())
+print(sel.estimator_.feature_importances_)
+
+
