@@ -82,7 +82,10 @@ print(X_train.shape,X_test.shape,y_train.shape,y_test.shape)
 sel = SelectFromModel(RandomForestRegressor(n_estimators = 100))
 sel.fit(X_train, y_train)
 
+#prints true of false for which features to use
 print(sel.get_support())
+
+#prints values of importance for features
 print(sel.estimator_.feature_importances_)
 
 
