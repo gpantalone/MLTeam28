@@ -37,11 +37,11 @@ Below are graphs visualizing the distribution each of the features. There are 68
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" float="mid"/>
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" float="mid"/>
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" float="mid"/>
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" float="mid"/>
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" float="mid"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" float="mid"/ width="850">
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" float="mid" width="850"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" float="mid" width="850"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" float="mid" width="850"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" float="mid" width="850"/>
 </p>
 
 # 3. Data Pre-Processing
