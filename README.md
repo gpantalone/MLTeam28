@@ -54,15 +54,15 @@ After visualizing the data we were able to process the data in some basic ways b
 # 4. Feature Selection
 In this section we will explore the methods used for feature selection. First we decided to use random forests to measure the importance of our features. The algorithm measures the decrease in impurity by selecting each feature at a certain branch in the tree. In the regressive case the measure of impurity used is variance. The features which decrese variance the most accross all the decision trees in the random forest will be given a higher importance. Below is a graph of normalized scores which add up to 1.0 (with some rounding). It is recomended to take features that score above the mean. In this case we are measuring 10 features, so the mean is 0.1.
 <p>
-     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/featScoreGrossRev.png">
+     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/featScoreGrossRev.png" float="mid">
 </p>
 We are predicting for gross revenue, and in this scenario the only recommended feature is budget. Even with normalized features budget is ruling the predictions. In order to create a more stable prediction we decided to try and predict with net revenue instead so that budget wouldn't rule the prediction. Everyone knows that a bigger budget just makes more money, but does it make enough money? Below is a graph of the exact same thing above, except we use net revenue as the predictor to try and see what other features are important other than budget.
 <p>
-     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/featScoreNetRev.png">
+     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/featScoreNetRev.png" float="mid">
 </p>
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
 
-#5. Net Revenue Prediction with """""""" Regression
+# 5. Net Revenue Prediction with """""""" Regression
 
 ## Movie Profit Analysis
 
