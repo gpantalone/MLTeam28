@@ -33,15 +33,15 @@ Below are graphs visualizing the distribution each of the features. There are 68
 
 <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/company.png" float="mid"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/country.png" float="mid"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" float="mid"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" float="mid"/>
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" float="mid"/>
 </p>
 
 # 3. Data Pre-Processing
@@ -61,6 +61,8 @@ We are predicting for gross revenue, and in this scenario the only recommended f
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/featScoreNetRevenue.png">
 </p>
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
+
+#5. Net Revenue Prediction with """""""" Regression
 
 ## Movie Profit Analysis
 
