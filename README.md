@@ -29,7 +29,7 @@ Films play a large role in generating profit and creating new Intellectual prope
 15) Year: Year the movie was released
 
 ### B) Data Visualization
-Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.)
+Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.). There are no graphs for Star, Director, or Writer because these categories are very diverse. Most people only appear once in each of these categories, and at most appear 20 different times. Each of these categories has around 4000 unique entries, out of our 4638 movies total.
 
 <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
@@ -48,7 +48,8 @@ Below are graphs visualizing the distribution each of the features. There are 68
 After visualizing the data we were able to process the data in some basic ways before we begin features selection.
 1. As noted above we removed all movies with no gross revenue listed
 2. Remove repetitve categories (don't need release date when we have release year), and irrelevant categories (movie name).
-3. Normalize the data
+3. Remove score and rating, which are IMDB values. These features aren't relevant to our problem. We want producers to be able to predict the revenue of their movie before its made so they could never know these numbers. Other categories like rating, length writer,etc. are decided by them before hand, unlike IMDB stats.
+4. Normalize the data
 
 # 4. Feature Selection
 
