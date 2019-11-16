@@ -65,7 +65,8 @@ We are predicting for gross revenue, and in this scenario the only recommended f
 </p>
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
 
-# 5. Net Revenue Prediction with """""""" Regression
+# 5. Net Revenue Prediction with Linear Regression
+
 
 ## Movie Profit Analysis
 
