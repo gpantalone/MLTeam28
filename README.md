@@ -35,9 +35,18 @@ Films play a large role in generating profit and creating new Intellectual prope
 Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.). There are no graphs for Star, Director, or Writer because these categories are very diverse. Most people only appear once in each of these categories, and at most appear 20 different times. Each of these categories has around 4000 unique entries, out of our 4638 movies total.
 
 ![ScreenShot](/Images/budget.png)
+![ScreenShot](/Images/gross.png)
+![ScreenShot](/Images/length.png)
+![ScreenShot](/Images/numVotes.png)
+![ScreenShot](/Images/score.png)
+![ScreenShot](/Images/company.png)
+![ScreenShot](/Images/country.png)
+![ScreenShot](/Images/genre.png)
+![ScreenShot](/Images/ratings.png)
+![ScreenShot](/Images/year.png)
 <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
-    <img src="/Images/gross.png" width="425" height= "300" />
+    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="425" height= "300" />
