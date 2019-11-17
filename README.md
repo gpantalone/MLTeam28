@@ -29,7 +29,7 @@ Films play a large role in generating profit and creating new Intellectual prope
 15) Year: Year the movie was released
 16) Month: Month the movie was released, a column we derived from release date
 17) Net Profit: Gross - Budget, also a column we added for each movie
-18) Profit as % of budget: A feature we created to experiment with predicting. Net Profit / Budget * 100 
+18) Profit as % of budget: A feature we created to experiment with predicting. Net Profit / Budget * 100
 
 ### B) Data Visualization
 Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.). There are no graphs for Star, Director, or Writer because these categories are very diverse. Most people only appear once in each of these categories, and at most appear 20 different times. Each of these categories has around 4000 unique entries, out of our 4638 movies total.
@@ -70,13 +70,13 @@ The first model we selected to make our predictions was linear regression. We us
 <p>
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Linear Regression Results.png" float="mid">
 </p>
-The Root Mean Square Error that we found with all features was 0.04533, indicating that our model had little error in its estimation. Through multiple runs, the RMSE tended to stay around this value. To ensure our model was not overfitting or underfitting, we compared the RMSE value that we received from the training set and the test set. Both RMSE values had very little discrepancy between each other indicating that the linear regression model did not overfit or underfit substantially. As can be seen, in most cases, our linear regression model with all features was quite helpful in at least getting a ball park figure of where a producer could expect the gross of a film to be based on the parameters we chose to include.
+The Root Mean Square Error that we found with all features was 0.0501, and an R^2 of 0.424 indicating that our model had some error in its estimation, but could be improved. Through multiple runs, the RMSE tended to stay around this value. To ensure our model was not overfitting or underfitting, we compared the RMSE value that we received from the training set and the test set. Both RMSE values had very little discrepancy between each other indicating that the linear regression model did not overfit or underfit substantially. As can be seen, in most cases, our linear regression model with all features was quite helpful in at least getting a ball park figure of where a producer could expect the gross of a film to be based on the parameters we chose to include.
 
 We then ran the the same model using only the features we selected above. Country, genre and rating were all dropped to see if that makes any substantial changes to the predictive capabilities of our model. The results of this run are shown below:
 <p>
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Linear Reg with drop.png" float="mid">
 </p>
-The RMSE we calculated without these three features turned out to be very small at 0.4802, as well. More importantly, there was no significant difference between the average RMSE found with the three features dropped and with them included.
+The RMSE we calculated without these three features turned out to be ok at 0.04820, and an R^2 of 0.530. Keep in mind that these features are normalized so on a larger scale we would like to get the RMSE to be a little smaller as even tiny shift in the value could mean being more accurate on the scale of millions of dollars.
 
 # 6
 
