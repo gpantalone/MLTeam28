@@ -37,7 +37,7 @@ Below are graphs visualizing the distribution each of the features. There are 68
 ![ScreenShot](/Images/budget.png)
 <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
-    <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="425" height= "300" />
+    <img src="/Images/gross.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/numVotes.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/score.png" width="425" height= "300" />
