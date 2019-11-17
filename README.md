@@ -88,7 +88,7 @@ Interestingly, the neural network did not perform better than the linear regress
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Neural Net dropped.png" float="mid">
 </p>
 Again, dropping the extra features did not have any significant impact on the RMSE which was surprising. The recorded RMSE was 0.057 with the featurese dropped. 
-## Movie Profit Analysis
+# 7. Movie Profit Analysis
 
 You can use the [editor on GitHub](https://github.com/gpantalone/MLTeam28/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
