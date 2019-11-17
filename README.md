@@ -12,24 +12,24 @@ Films play a large role in generating profit and creating new Intellectual prope
 # 2. Exploration and Visualization of Data
 ### A) Data: Movie Industry, Three Decades of Movies[3]
 #### Features of the data, 18 total
-1) Budget: Amount spent to produce the movie
-2) Company: Production company for the movie
-3) Country: Country the movie was produced in
-4) Director: Director of movie
-5) Genre: Genre of the movie produced
-6) Gross: Gross revenue of the movie
-7) Name: Name of the movie
-8) Rating: Parental Guidance rating of the movie
-9) Released: Exact release date of the movie
-10) Runtime: Total runtime in minutes of the movie
-11) Score: Score (out of 10) on IMDB
-12) Star: Leading Actor/Actress for the movie
-13) Votes: Number of votes (for the score) on IMDB
-14) Writer: Writer of the movie
-15) Year: Year the movie was released
-16) Month: Month the movie was released, a column we derived from release date
-17) Net Profit: Gross - Budget, also a column we added for each movie
-18) Profit as % of budget: A feature we created to experiment with predicting. Net Profit / Budget * 100
+1. Budget: Amount spent to produce the movie
+2. Company: Production company for the movie
+3. Country: Country the movie was produced in
+4. Director: Director of movie
+5. Genre: Genre of the movie produced
+6. Gross: Gross revenue of the movie
+7. Name: Name of the movie
+8. Rating: Parental Guidance rating of the movie
+9. Released: Exact release date of the movie
+10. Runtime: Total runtime in minutes of the movie
+11. Score: Score (out of 10) on IMDB
+12. Star: Leading Actor/Actress for the movie
+13. Votes: Number of votes (for the score) on IMDB
+14. Writer: Writer of the movie
+15. Year: Year the movie was released
+16. Month: Month the movie was released, a column we derived from release date
+17. Net Profit: Gross - Budget, also a column we added for each movie
+18. Profit as % of budget: A feature we created to experiment with predicting. Net Profit / Budget * 100
 
 ### B) Data Visualization
 Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.). There are no graphs for Star, Director, or Writer because these categories are very diverse. Most people only appear once in each of these categories, and at most appear 20 different times. Each of these categories has around 4000 unique entries, out of our 4638 movies total.
