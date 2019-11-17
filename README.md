@@ -80,11 +80,13 @@ The RMSE we calculated without these three features turned out to be acceptable 
 
 # 6. Prediction with a Neural Network
 The second model we used was a neural network. We again used scikit learn to implement our model. Specifically, we used the MLPRegressor class to create a neural network. It consisted of 3 hidden layers, each with 13 neurons. We chose to select a neural network as we felt that the complexity of the problem would likely be handled well by a neural network. The results we received from the model when used with all features are shown below:
-
-
+<p>
+     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Neural Net Results.png" float="mid">
+</p>
 Interestingly, the neural network did not perform better than the linear regression model discussed above. As can be seen, the 0.058 RMSE value of the neural network was just higher than the observed value from the linear regression model. When used with only the features recommended, the following results were received:
-
-
+<p>
+     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Neural Net dropped.png" float="mid">
+</p>
 Again, dropping the extra features did not have any significant impact on the RMSE which was surprising. The recorded RMSE was 0.057 with the featurese dropped. 
 ## Movie Profit Analysis
 
