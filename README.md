@@ -79,15 +79,15 @@ We then ran the the same model using only the features we selected above. Countr
 The RMSE we calculated without these three features turned out to be acceptable at 0.04820, and an R^2 of 0.530. Keep in mind that these features are normalized so on a larger scale we would like to get the RMSE to be even smaller as tiny shifts in the value could be important on our scale of millions of dollars.
 
 # 6. Prediction with a Neural Network
-The second model we used was a neural network. We again used scikit learn to implement our model. Specifically, we used the MLPRegressor class to create a neural network. It consisted of 3 hidden layers, each with 13 neurons. We chose to select a neural network as we felt that the complexity of the problem would likely be handled well by a neural network. The results we received from the model when used with all features are shown below:
+The second model we used was a neural network. We again used scikit learn to implement our model. Specifically, we used the MLPRegressor class to create a neural network. It consisted of 2 hidden layers, each with 32 neurons. Our activation function was relu, and our optimizer was adam. We used an adaptive learning rate and found that performed significantly better than using a constant learning rate. We chose to select a neural network as we felt that the complexity of the problem would likely be handled well by a neural network. The results we received from the model when used with all features are shown below:
 <p>
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Neural Net Results.png" float="mid">
 </p>
-Interestingly, the neural network did not perform better than the linear regression model discussed above. As can be seen, the 0.058 RMSE value of the neural network was just higher than the observed value from the linear regression model. When used with only the features recommended, the following results were received:
+Interestingly, the neural network did not perform better than the linear regression model discussed above. As can be seen, the 0.058 RMSE value of the neural network higher than the observed value from the linear regression model. When used with only the features recommended, the following results were received:
 <p>
      <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/Neural Net dropped.png" float="mid">
 </p>
-Again, dropping the extra features did not have any significant impact on the RMSE which was surprising. The recorded RMSE was 0.057 with the featurese dropped. 
+Dropping the extra features showed a slight improvement for RMSE but nothing the massive. The recorded RMSE was 0.055 with the featurese dropped.
 
 # 7. Movie Profit Analysis
 
