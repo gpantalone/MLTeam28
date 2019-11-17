@@ -2,11 +2,11 @@
 ## Team Members: Thomas Brownlow, Talha Ahsan, Giuseppe Pantalone, Nabiha Ahsan
 
 ---
-
+![ScreenShot](/Images/intro.png)
 # 1. Overview of Project
 Films play a large role in generating profit and creating new Intellectual properties for media companies however, a multitude of factors including casting, ratings, release date and genre can play a role in a film’s financial success. Anita Elberse explored the role that stars have in the financial success of a film while Neil Terry and co. discussed the role that a variety of factors such as production budget and critical acclaim played as well.[1][2] Despite having all of this information, the large number of factors involved means it can be difficult for producers to predict how successful a film would be. To explore possible solutions to this problem, we decided to see if we could use machine learning algorithms to predict the success of a film to help come up with better earnings forecasts for films. This could prove invaluable in helping production companies decide investment and marketing for films that they produce. Our plan is as follows:
 1. Use decision trees/random forests for feature selection to find the features that impact revenue the most
-2. Use regression to predict the revenue a movie will produce given its features.
+2. Use several regression to predict the revenue a movie will produce given its features.
 
 ---
 # 2. Exploration and Visualization of Data
@@ -35,7 +35,8 @@ Films play a large role in generating profit and creating new Intellectual prope
 Below are graphs visualizing the distribution each of the features. There are 6820 movies in total, but a decent amount of those have no gross revenue listed which makes them useless for our project. After removing these blank data points we are left with 4638 movies to visualize. You will notice that our features cover of very wide range of values so normalization will be a must. We have continous variables(budget, gross revenue, etc.) and categorical variables(genre, country, company, etc.). There are no graphs for Star, Director, or Writer because these categories are very diverse. Most people only appear once in each of these categories, and at most appear 20 different times. Each of these categories has around 4000 unique entries, out of our 4638 movies total.
 
 
-![ScreenShot](/Images/budget.png) ![ScreenShot](/Images/gross.png)
+![ScreenShot](/Images/budget.png)
+![ScreenShot](/Images/gross.png)
 ![ScreenShot](/Images/length.png)
 ![ScreenShot](/Images/numVotes.png)
 ![ScreenShot](/Images/score.png)
