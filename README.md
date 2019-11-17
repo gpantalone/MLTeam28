@@ -91,6 +91,12 @@ Dropping the extra features showed a slight improvement for RMSE but nothing the
 
 # 7. Conclusion
 
+### A) Feature Selection
+Using random forests certain helped to narrow down our models to the relevant features, but didn't provide as much of an impact as we would have expected. We believe this is because of 2 different things. First, no matter whether you look gross revenue, or net revenue, budget dominates the prediction so the other features are overshadowed by budget. Second, some of the recommended features have a high cardinality of unique values. This makes the data for these features like star and director sparse so in order to capitalize on the true power of these features we would need a much bigger data set. Regardless we can confidently say that the features we found (Budget, Director, Runtime, Star, Writer, Company, and Year) have a significant impact on the revenue a movie produces and should try to be incorporated in any model that aims to predict movie revenue.
+
+### B) Regression Models
+We explored both linear regression models, and neural network models to help solve our regression problem with an expectation that the neural nets would out perform linear regression because of the nuance of the problem with many different factors affecting revenue, but ended up finding the opposite. While the difference wasn't extreme, and neural nets still performed ok, the linear models overall performed better. We believe this divergence from expectation is exactly due to the reason listed in part A). Our neural net wasn't able to fully capitalize on the nuances that could be available from the high cardinality features, while the linear model was able to capitalize on the heavy importance budget plays on revenue. These 2 factors together allowed for the linear model to outperform the neural net. The linear model consistently provides values that are close to the actual, and hardly ever over or underestimated by alot., where the neural net was more inconsistent.
+
 # 8. References
     1) Elberse, A. (2007), The Power of Stars: Do Star Actors Drive the Success of Movies? Journal of Marketing 71, 102–120.
     2) Terry, N. Buttler, M. De’Armond, D. (2005), The Determinants of Domestic Box Office Performance in the Motion Picture Industry,
