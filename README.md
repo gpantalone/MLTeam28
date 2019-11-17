@@ -44,7 +44,7 @@ Below are graphs visualizing the distribution each of the features. There are 68
 ![ScreenShot](/Images/genre.png)
 ![ScreenShot](/Images/ratings.png)
 ![ScreenShot](/Images/year.png)
-<p float="left">
+<!-- <p float="left">
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/budget.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/gross.png" width="425" height= "300" />
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/length.png" width="425" height= "300" />
@@ -55,7 +55,7 @@ Below are graphs visualizing the distribution each of the features. There are 68
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/genre.png" float="mid" width="850"/>
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/ratings.png" float="mid" width="850"/>
     <img src="https://github.com/gpantalone/MLTeam28/blob/master/Images/year.png" float="mid" width="850"/>
-</p>
+</p> -->
 
 # 3. Data Pre-Processing
 After visualizing the data we were able to process the data in some basic ways before we begin features selection.
