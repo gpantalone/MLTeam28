@@ -66,11 +66,19 @@ We are predicting for gross revenue, and in this scenario the only recommended f
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
 
 # 5. Net Revenue Prediction with Linear Regression
-The first model we selected to make our predictions was linear regression. We used scikit learn's linear regression tool to achieve this. We decided to use linear regression as we felt that it fit our use case well. As we used scikit learn's tool, the linear regression model we had used Ordinary Least Squares to make estimations. The result we found are displayed below:
+The first model we selected to make our predictions was linear regression. We used scikit learn's linear regression tool to achieve this. We decided to use linear regression as we felt that it fit our use case well since it is useful in predicting continuous values. As we used scikit learn's tool, the linear regression model we had used Ordinary Least Squares to make estimations. We also used scikit learn's  Note that the results were normalized for the sake of this visualization. Due to the large range of values, normalizing was important to make the visualization easier to interpret. We decided to run the model with all the features available and then only with the features we selected above. First up, the results with all the features are shown below:
 
 
 
-The Root Mean Square Error that we found was 0.04, indicating that our model had little error in its estimation. To ensure our model was not overfitting or underfitting, we compared the RMSE value that we received from the training set and the test set. Both RMSE values had very little discrepancy between each other indicating that the linear regression model did not overfit or underfit substantially. We also calculated the variance of the results based on our results and found that the variance was also low. This again indicates that our predicted gross was quite similar to the actual gross. 
+The Root Mean Square Error that we found with all features was 0.04533, indicating that our model had little error in its estimation. Through multiple runs, the RMSE tended to stay around this value. To ensure our model was not overfitting or underfitting, we compared the RMSE value that we received from the training set and the test set. Both RMSE values had very little discrepancy between each other indicating that the linear regression model did not overfit or underfit substantially. As can be seen, in most cases, our linear regression model with all features was quite helpful in at least getting a ball park figure of where a producer could expect the gross of a film to be based on the parameters we chose to include.
+
+We then ran the the same model using only the features we selected above. Country, genre and rating were all dropped to see if that makes any substantial changes to the predictive capabilities of our model. The results of this run are shown below:
+
+
+
+The RMSE we calculated without these three features turned out to be very small at 0.4802, as well. More importantly, there was no significant difference between the average RMSE found with the three features dropped and with them included.
+
+# 6
 
 ## Movie Profit Analysis
 
