@@ -10,7 +10,7 @@ Films play a large role in generating profit and creating new Intellectual prope
 
 ---
 # 2. Exploration and Visualization of Data
-### A) Data: Movie Industry, Three Decades of Movies (Kaggle dataset listed in refrences at bottom)
+### A) Data: Movie Industry, Three Decades of Movies[3]
 #### Features of the data, 18 total
 1) Budget: Amount spent to produce the movie
 2) Company: Production company for the movie
@@ -87,3 +87,12 @@ Interestingly, the neural network did not perform better than the linear regress
 ![ScreenShot](/Images/Neural_Net_dropped.png)
 
 Dropping the extra features showed a slight improvement for RMSE but nothing the massive. The recorded RMSE was 0.054 with the featurese dropped.
+
+# 7. Conclusion
+
+# 8. References
+    1) Elberse, A. (2007), The Power of Stars: Do Star Actors Drive the Success of Movies? Journal of Marketing 71, 102–120.
+    2) Terry, N. Buttler, M. De’Armond, D. (2005), The Determinants of Domestic Box Office Performance in the Motion Picture Industry,
+           Southwestern Economic Review, 137-148
+    3) The Movie Database (2017).TMDB 5000 Movie Dataset, (version 2), Web
+
