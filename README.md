@@ -45,8 +45,8 @@ Below are graphs visualizing the distribution each of the features. There are 68
 ![ScreenShot](/Images/genre.png)
 ![ScreenShot](/Images/ratings.png)
 ![ScreenShot](/Images/year.png)
-![ScreenShot](/Images/MonthChart.png)
-![ScreenShot](/Images/NetProfit.png)
+![ScreenShot](/Images/MonthChart.PNG)
+![ScreenShot](/Images/NetProfit.PNG)
 
 
 # 3. Data Pre-Processing
@@ -59,17 +59,17 @@ After visualizing the data we were able to process the data in some basic ways b
 # 4. Feature Selection
 In this section we will explore the methods used for feature selection. First we decided to use random forests to measure the importance of our features. The algorithm measures the decrease in impurity by selecting each feature at a certain branch in the tree. In the regressive case the measure of impurity used is variance. The features which decrese variance the most accross all the decision trees in the random forest will be given a higher importance. Below is a graph of normalized scores which add up to 1.0 (with some rounding). It is recomended to take features that score above the mean. In this case we are measuring 10 features, so the mean is 0.1.
 
-![ScreenShot](/Images/FeatScoreGrossRev2.png)
+![ScreenShot](/Images/FeatScoreGrossRev2.PNG)
 
 We are predicting for gross revenue, and in this scenario the only recommended feature is budget. Even with normalized features budget is ruling the predictions. In order to create a more stable prediction we decided to try and predict with net revenue instead so that budget wouldn't rule the prediction. Everyone knows that a bigger budget just makes more money, but does it make enough money? Below is a graph of the exact same thing above, except we use net revenue as the predictor to try and see what other features are important other than budget.
 
-![ScreenShot](/Images/FeatScoreNetRev2.png)
+![ScreenShot](/Images/FeatScoreNetRev2.PNG)
 
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
 
 We also decided to take a shot at predicting a metric we came up with called Profit as Percent of Budget. A movie can be successful even if it doesn't make as much as other movies if it makes a large return on investment. This metric, which we calculated from values in the table is equal to the profit / budget * 100.
 
-![ScreenShot](/Images/FeatScoreProfitPercent.png)
+![ScreenShot](/Images/FeatScoreProfitPercent.PNG)
 
  It turned out that predicting this outcome relied almost entirely on the budget feature, but for the opposite reason as for gross revenue. Movies that had much smaller budgets tended to be much more likely to have higher percent of budget as profit. Interestingly the only other two categrories that met or were even close to the 0.1 threshold were runtime which met the threshold in predicting other standards, and Genre, which was had one of the lowest feature scores for the other prediction values. It turns out low budget horror movies and comedies tend to be quite profitable as percentages compared to their budget. With some extreme outliers like Paranormal Activity, Blair Witch Project, and Napoleon Dynamite achieving 11,000% and even over 700,000% in the case of Paranormal Activity.
 
