@@ -45,6 +45,8 @@ Below are graphs visualizing the distribution each of the features. There are 68
 ![ScreenShot](/Images/genre.png)
 ![ScreenShot](/Images/ratings.png)
 ![ScreenShot](/Images/year.png)
+![ScreenShot](/Images/MonthChart.png)
+![ScreenShot](/Images/NetProfit.png)
 
 
 # 3. Data Pre-Processing
@@ -57,13 +59,20 @@ After visualizing the data we were able to process the data in some basic ways b
 # 4. Feature Selection
 In this section we will explore the methods used for feature selection. First we decided to use random forests to measure the importance of our features. The algorithm measures the decrease in impurity by selecting each feature at a certain branch in the tree. In the regressive case the measure of impurity used is variance. The features which decrese variance the most accross all the decision trees in the random forest will be given a higher importance. Below is a graph of normalized scores which add up to 1.0 (with some rounding). It is recomended to take features that score above the mean. In this case we are measuring 10 features, so the mean is 0.1.
 
-![ScreenShot](/Images/featScoreGrossRev.png)
+![ScreenShot](/Images/FeatScoreGrossRev2.png)
 
 We are predicting for gross revenue, and in this scenario the only recommended feature is budget. Even with normalized features budget is ruling the predictions. In order to create a more stable prediction we decided to try and predict with net revenue instead so that budget wouldn't rule the prediction. Everyone knows that a bigger budget just makes more money, but does it make enough money? Below is a graph of the exact same thing above, except we use net revenue as the predictor to try and see what other features are important other than budget.
 
-![ScreenShot](/Images/featScoreNetRev.png)
+![ScreenShot](/Images/FeatScoreNetRev2.png)
 
 The features that score above 0.1 with this method are Budget, Director, Runtime, Star, and Writer. Company and Year were both very close to the cutoff so we will also experiment with those features. The features that didn't make the cut are Country, Genre, and Rating.
+
+We also decided to take a shot at predicting a metric we came up with called Profit as Percent of Budget. A movie can be successful even if it doesn't make as much as other movies if it makes a large return on investment. This metric, which we calculated from values in the table is equal to the profit / budget * 100.
+
+![ScreenShot](/Images/FeatScoreProfitPercent.png)
+
+ It turned out that predicting this outcome relied almost entirely on the budget feature, but for the opposite reason as for gross revenue. Movies that had much smaller budgets tended to be much more likely to have higher percent of budget as profit. Interestingly the only other two categrories that met or were even close to the 0.1 threshold were runtime which met the threshold in predicting other standards, and Genre, which was had one of the lowest feature scores for the other prediction values. It turns out low budget horror movies and comedies tend to be quite profitable as percentages compared to their budget. With some extreme outliers like Paranormal Activity, Blair Witch Project, and Napoleon Dynamite achieving 11,000% and even over 700,000% in the case of Paranormal Activity.
+
 
 # 5. Net Revenue Prediction with Linear Regression
 The first model we selected to make our predictions was linear regression. We used scikit learn's linear regression tool to achieve this. We decided to use linear regression as we felt that it fit our use case well since it is useful in predicting continuous values. As we used scikit learn's tool, the linear regression model we had used Ordinary Least Squares to make estimations. We also used scikit learn's  Note that the results were normalized for the sake of this visualization. Due to the large range of values, normalizing was important to make the visualization easier to interpret. We decided to run the model with all the features available and then only with the features we selected above. First up, the results with all the features are shown below:
@@ -78,6 +87,8 @@ We then ran the the same model using only the features we selected above. Countr
 
 The RMSE we calculated without these three features turned out to be acceptable at 0.04820, and an R^2 of 0.530. Keep in mind that these features are normalized so on a larger scale we would like to get the RMSE to be even smaller as tiny shifts in the value could be important on our scale of millions of dollars.
 
+For both runs with linear regression, 
+
 # 6. Prediction with a Neural Network
 The second model we used was a neural network. We again used scikit learn to implement our model. Specifically, we used the MLPRegressor class to create a neural network. It consisted of 2 hidden layers, each with 32 neurons. Our activation function was relu, and our optimizer was adam. We used an adaptive learning rate and found that performed significantly better than using a constant learning rate. We chose to select a neural network as we felt that the complexity of the problem would likely be handled well by a neural network. The results we received from the model when used with all features are shown below:
 
@@ -88,8 +99,6 @@ Interestingly, the neural network did not perform better than the linear regress
 ![ScreenShot](/Images/Neural_Net_dropped.png)
 
 Dropping the extra features showed a slight improvement for RMSE but nothing the massive. The recorded RMSE was 0.054 with the featurese dropped.
-
-For both runs, the RMSE when predicting the training data and the RMSE observed when predicting the test data had very little change. This showed that there was no significant overfitting or underfitting from the model on either runs.
 
 # 7. Conclusion
 
