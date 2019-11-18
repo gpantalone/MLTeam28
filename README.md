@@ -52,8 +52,9 @@ Below are graphs visualizing the distribution each of the features. There are 68
 # 3. Data Pre-Processing
 After visualizing the data we were able to process the data in some basic ways before we begin features selection.
 1. As noted above we removed all movies with no gross revenue listed
-2. Remove repetitve categories (don't need release date when we have release year), and irrelevant categories (movie name).
-3. Remove score and rating, which are IMDB values. These features aren't relevant to our problem. We want producers to be able to predict the revenue of their movie before its made so they could never know these numbers. Other categories like rating, length writer,etc. are decided by them before hand, unlike IMDB stats.
+2. Remove repetitve categories (release date is too specific, better to use release month)
+3. Remove irrelevant to prediction features (movie name, release year) because they wouldn't be useful to actually predict whether a movie would turn a profit.
+4. Remove score and votes, which are IMDB values. These features aren't relevant to our problem. We want producers to be able to predict the revenue of their movie before its made which would be before the movies is reviewed. Other categories like rating, length writer,etc. are decided by them before hand, unlike IMDB stats.
 4. Normalize the data and use sklearns label encoder for categorical data
 
 # 4. Feature Selection
