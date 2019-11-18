@@ -82,10 +82,13 @@ The RMSE we calculated without these three features turned out to be acceptable 
 The second and third models we used were ridge regression and lasso regression, again using scikit learn. We used ridge and lasso regression because they are both optimized for prediction. Ridge regression can't zero out coefficients but in contrast to this, the lasso does both parameter shrinkage and variable selection automatically. Both of these regressions were run with all features.
 
 For our lasso regression model, the Root Mean Square Error that we found was 0.0523. Through multiple runs, the RMSE tended to stay around this value. Once again, to ensure our model was not overfitting or underfitting, we compared the RMSE values from the training set and the test set, and both RMSE values had almost no discrepancy indicating that there was very little to no overfitting or underfitting. Similarly to other models, our lasso regression model with all features was quite helpful in estimating the gross of a film based on our parameters.
-INSERT SC
+![ScreenShot](/Images/rsme3.png)
 
 For our ridge regression model, we tried a few different alpha values to see what worked best. We first used an alpha value of 4 and then an alpha value of 10^10. The MSE for a=4 was 0.0650 while the MSE for a=10^10 was 0.0516. Then, we tried it with a=0 (perfomed least squares regression) and got an MSE of 0.0027. After this, we used cross-validation to choose a value of alpha, for which we got an MSE almost identical to that of the least squares regression. The RMSE for the least squares and ridge with cross-validated alpha value was 0.05228.
-INSERT SC
+![ScreenShot](/Images/rsme1.png)
+![ScreenShot](/Images/rsme2.png)
+![ScreenShot](/Images/rsme4.png)
+![ScreenShot](/Images/rsme5.png)
 
 Although the differences in RMSE aren't huge, the linear regression model outperfomed both ridge and lasso with all features.
 
